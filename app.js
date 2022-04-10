@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-const PORT = 3000
 const mongoose = require('mongoose')
 const taskRoute = require('./routes/taskRoute')
 const path = require('path');
@@ -20,4 +19,4 @@ app.use('/', taskRoute);
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'templates'))
 
-app.listen(PORT, () => console.log(`Runnig in port:${PORT}`))
+app.listen(process.env.PORT || 3000, () => console.log("Runnig"))
