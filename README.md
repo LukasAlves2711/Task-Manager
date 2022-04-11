@@ -37,7 +37,7 @@ A simple task scheduling application where some HTTP methods were implemented fo
 ## Features  ✔️
 
 
- [x] Menu to access the games :
+ [x] Menu
 
      - [x] Scheduling
      - [x] Editing tasks not yet done
