@@ -9,7 +9,7 @@ const taskController = require('../controllers/taskController')
 // GET
 router.get('/', taskController.allTasks)
 router.get('/add', (req, res) => res.render('add', { error: false, body: {} }))
-router.get('/:task', taskController.redirect)
+router.get('/taks/:task', taskController.redirect)
 router.get('/edit/:id', taskController.loadTask)
 
 
