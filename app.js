@@ -3,8 +3,9 @@ const app = express()
 const mongoose = require('mongoose')
 const taskRoute = require('./routes/taskRoute')
 const path = require('path');
+const MONGO_URL = process.env.MONGO_URL || "mongodb://localhost:27017/tasks"
 
-mongoose.connect("mongodb://localhost:27017/tasks", {
+mongoose.connect(MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(
