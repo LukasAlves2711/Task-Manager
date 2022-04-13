@@ -2,7 +2,7 @@ const Task = require('../models/Task')
 
 
 const redirect = async(req, res, next) => {
-    let task = req.params.task;
+    let task = req.params.title;
     try {
         let doc = await Task.findOne({ task })
         console.log(doc)
@@ -66,9 +66,9 @@ const loadTask = async(req, res) => {
 
 const editTask = async(req, res) => {
 
-    let tks = {};
-    tks.task = req.body.task;
-    tks.description = req.body.description;
+    let task = {};
+    task.title = req.body.title;
+    task.description = req.body.description;
 
     let id = req.params.id;
     if (!id) {
@@ -76,7 +76,7 @@ const editTask = async(req, res) => {
     }
 
     try {
-        let doc = await Task.updateOne({ _id: id }, tks)
+        let doc = await Task.updateOne({ _id: id }, task)
         res.redirect('/')
     } catch (error) {
         res.render('edit', { error, body: req.body })
