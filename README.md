@@ -67,7 +67,7 @@ https://internship-project1.herokuapp.com/
 
 Soon this project will be implemented
 
-* Backend (Node.JS)
+* Back end (Node.JS)
 
 * Front end (EJS)
 
